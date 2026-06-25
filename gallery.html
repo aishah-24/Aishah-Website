@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - My Portfolio</title>
+    <style>
+        body {
+            font-family: Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #755252;#755263;;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #1B1B1B;
+            padding: 10px 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .animated-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #1B1B1B;
+            animation: moveTitle 5s ease-in-out infinite;
+        }
+
+        @keyframes moveTitle {
+            0% {
+                transform: translateX(-100%);
+            }
+            50% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        .memory-text {
+            text-align: center;
+            font-size: 18px;
+            color: #555;
+            margin-top: 10px;
+            padding: 10px;
+            font-style: italic;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+            gap: 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+            background-color: white;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+
+        .gallery-item {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s forwards;
+        }
+
+        .gallery-item:nth-child(odd) {
+            animation-delay: 0.2s;
+        }
+
+        .gallery-item:nth-child(even) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #1B1B1B;
+            color: white;
+            padding: 10px 0;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="navbar">      
+	<a href="new.html">Home</a>
+        <a href="biodata.html">Biodata</a>
+        <a href="Family.html">Family</a>
+        <a href="Education.html">Education</a>
+        <a href="Gallery.html">Gallery</a>
+    </div>
+
+    <div class="animated-title">GALLERY</div>
+
+
+    <div class="memory-text">
+        "Every picture tells a story and keeps a memory alive."
+    </div>
+
+    <div class="gallery-container">
+        <div class="gallery-item"><img src="images/Friends Raya.jpeg" alt="Image 1"></div>
+        <div class="gallery-item"><img src="images/paksu.jpeg" alt="Images 2"></div>
+        <div class="gallery-item"><img src="images/yaya sofia.jpeg" alt="Image 3"></div>
+        <div class="gallery-item"><img src="images/run.jpeg" alt="Image 4"></div>
+        <div class="gallery-item"><img src="images/jaja.jpeg" alt="Image 5"></div>
+        <div class="gallery-item"><img src="images/f_jkr.jpeg" alt="Image 7"></div>
+        <div class="gallery-item"><img src="images/mak.jpeg" alt="Image 8"></div>
+        <div class="gallery-item"><img src="images/adila.jpeg" alt="Image 9"></div>
+        <div class="gallery-item"><img src="images/aisyaazra.jpeg" alt="Image 10"></div>
+        <div class="gallery-item"><img src="images/trio.jpeg" alt="Image 11"></div>
+        <div class="gallery-item"><img src="images/mama.jpeg" alt="Image 12"></div>
+        <div class="gallery-item"><img src="images/zaty.jpeg" alt="Image 13"></div>
+        <div class="gallery-item"><img src="images/26 FEB 2026 (6).jpeg" alt= "Images 14"></div>
+    </div>
+
+ 
+    <div class="footer">
+        <p>This Website is developed for IMD318 Individual Assignment</p>
+    </div>
+
+</body>
+</html>
