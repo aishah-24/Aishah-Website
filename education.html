@@ -9,7 +9,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #755252,#755263;
+            background-color: #755252;
         }
         .navbar {
             display: flex;
@@ -18,7 +18,7 @@
             padding: 10px 0;
         }
         .navbar a {
-            color: #ffffff,#755263;
+            color: #ffffff;
             text-decoration: none;
             margin: 0 15px;
             font-size: 16px;
@@ -26,7 +26,6 @@
         .navbar a:hover {
             text-decoration: underline;
         }
-
         .content {
             max-width: 1000px;
             margin: 30px auto;
@@ -35,13 +34,11 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
-
         .content h2 {
             margin-bottom: 30px;
             font-size: 30px;
             text-align: center;
         }
-
         .footer {
             text-align: center;
             background-color: #1B1B1B;
@@ -49,16 +46,13 @@
             padding: 10px 0;
             margin-top: 30px;
         }
-
         .school-icons {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             margin-top: 20px;
-            justify-items: center; 
-            position: relative;
+            justify-items: center;
         }
-
         .school-icons a {
             text-decoration: none;
             display: block;
@@ -69,20 +63,17 @@
             background-color: #fff;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
+            color: black;
         }
-
         .school-icons a:hover {
             transform: scale(1.1);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
-
         .school-icons img {
             width: 100px;
             height: auto;
             border-radius: 10px;
         }
-
-      
         .open-text {
             position: absolute;
             bottom: 10px;
@@ -96,11 +87,9 @@
             opacity: 0;
             transition: opacity 0.3s;
         }
-
         .school-icons a:hover .open-text {
             opacity: 1;
         }
-
         .modal {
             display: none;
             position: fixed;
@@ -112,14 +101,12 @@
             overflow: auto;
             background-color: rgba(0, 0, 0, 0.4);
         }
-
         .modal-content {
             margin: 10% auto;
             display: block;
             width: 80%;
             max-width: 700px;
         }
-
         .modal-close {
             position: absolute;
             top: 15px;
@@ -127,13 +114,10 @@
             color: #aaa;
             font-size: 40px;
             font-weight: bold;
-        }
-
-        .modal-close:hover,
-        .modal-close:focus {
-            color: black;
-            text-decoration: none;
             cursor: pointer;
+        }
+        .modal-close:hover {
+            color: black;
         }
     </style>
 </head>
@@ -149,48 +133,67 @@
 
     <div class="content">
         <h2>My Education Journey</h2>
-        <p>أَمَّنْ هُوَ قَانِتٌ آنَاءَ اللَّيْلِ سَاجِدًا وَقَائِمًا يَحْذَرُ الْآخِرَةَ وَيَرْجُو رَحْمَةَ رَبِّهِ ۗ قُلْ هَلْ يَسْتَوِي الَّذِينَ يَعْلَمُونَ وَالَّذِينَ لَا يَعْلَمُونَ ۗ إِنَّمَا يَتَذَكَّرُ أُولُو الْأَلْبَابِ</p>
-        <p>"Adakah sama orang-orang yang mengetahui dengan orang-orang yang tidak mengetahui?” Sesungguhnya orang yang berakallah yang dapat menerima pelajaran" Surat Az-Zuumar Ayat 9</p>
-       <div class="school-icons">
-    <img src="logo-tabika-kemas.webp" alt="Tadika Kemas Kuala Lumpur">
-    <p>Tadika Kemas Kuala Lumpur</p>
+        <p>أَمَّنْ هُوَ قَانِتٌ آنَاءَ اللَّيْلِ سَاجِدًا وَقَائِمًا يَحْذَرُ الْآخِرَةَ وَيَرْجُو رَحْمَةَ رَبِّهِ ۗ قُلْ هَلْ يَسْتَوِي الَّذِينَ يَعْلَمُونَ وَالَّذِينَ لَا يَعْلَمُونَ ۗ إِنَّمَا يَتَذَكَّرُ أُولُو الْأَلْبَابِ</p>
+        <p>"Adakah sama orang-orang yang mengetahui dengan orang-orang yang tidak mengetahui?" Sesungguhnya orang yang berakallah yang dapat menerima pelajaran" Surat Az-Zuumar Ayat 9</p>
 
-    <img src="sk-wangsa-maju.jpg" alt="Sekolah Kebangsaan Wangsa Maju">
-    <p>Sekolah Kebangsaan Wangsa Maju</p>
+        <div class="school-icons">
 
-    <img src="sktb.jpg" alt="Sekolah Telok Berembang">
-    <p>Sekolah Telok Berembang</p>
+            <a href="#" onclick="openModal('tadika')">
+                <img src="logo-tabika-kemas.webp" alt="Tadika Kemas Kuala Lumpur">
+                <p>Tadika Kemas Kuala Lumpur</p>
+                <span class="open-text">Buka</span>
+            </a>
 
-    <img src="SMKLC.webp" alt="Sekolah Menengah Lubok China">
-    <p>Sekolah Menengah Lubok China</p>
+            <a href="#" onclick="openModal('skwm')">
+                <img src="sk-wangsa-maju.jpg" alt="Sekolah Kebangsaan Wangsa Maju">
+                <p>Sekolah Kebangsaan Wangsa Maju</p>
+                <span class="open-text">Buka</span>
+            </a>
 
-    <img src="uitmrembau.jpeg" alt="UiTM Rembau">
-    <p>UiTM Rembau</p>
-</div>
+            <a href="#" onclick="openModal('sktb')">
+                <img src="sktb.jpg" alt="Sekolah Telok Berembang">
+                <p>Sekolah Telok Berembang</p>
+                <span class="open-text">Buka</span>
+            </a>
 
-        <div id="tadikaModal" class="modal">
-            <span class="modal-close" onclick="closeModal('tadika')">&times;</span>
-            <img class="modal-content" id="tabika kemas" src="TADIKA" alt="Tadika Kemas Kuala LUmpur">
+            <a href="#" onclick="openModal('smklc')">
+                <img src="SMKLC.webp" alt="Sekolah Menengah Lubok China">
+                <p>Sekolah Menengah Lubok China</p>
+                <span class="open-text">Buka</span>
+            </a>
+
+            <a href="#" onclick="openModal('uitm')">
+                <img src="uitmrembau.jpeg" alt="UiTM Rembau">
+                <p>UiTM Rembau</p>
+                <span class="open-text">Buka</span>
+            </a>
+
         </div>
 
-        <div id="skwm" class="modal">
+        <!-- MODAL -->
+        <div id="tadikaModal" class="modal">
+            <span class="modal-close" onclick="closeModal('tadika')">&times;</span>
+            <img class="modal-content" src="logo-tabika-kemas.webp" alt="Tadika Kemas Kuala Lumpur">
+        </div>
+
+        <div id="skwmModal" class="modal">
             <span class="modal-close" onclick="closeModal('skwm')">&times;</span>
-            <img class="modal-content" id="Sk WM Img" src="Sekolah Kebangsaan Wangsa Majuf" alt="Sekolah Kebangsaan Wangsa Maju">
+            <img class="modal-content" src="sk-wangsa-maju.jpg" alt="Sekolah Kebangsaan Wangsa Maju">
         </div>
 
         <div id="sktbModal" class="modal">
             <span class="modal-close" onclick="closeModal('sktb')">&times;</span>
-            <img class="modal-content" id="maidamImg" src="Sekolah Kebangsaan Telok Berembang" alt="SKTB>
+            <img class="modal-content" src="sktb.jpg" alt="Sekolah Telok Berembang">
         </div>
 
         <div id="smklcModal" class="modal">
             <span class="modal-close" onclick="closeModal('smklc')">&times;</span>
-            <img class="modal-content" id="SKMLC" src="mmpmck.jfif" alt="Sekolah Menengah Kebangsaan Lubok China">
+            <img class="modal-content" src="SMKLC.webp" alt="Sekolah Menengah Lubok China">
         </div>
 
         <div id="uitmModal" class="modal">
             <span class="modal-close" onclick="closeModal('uitm')">&times;</span>
-            <img class="modal-content" id="uitmImg" src="uitmck.jfif" alt="UiTM Rembau">
+            <img class="modal-content" src="uitmrembau.jpeg" alt="UiTM Rembau">
         </div>
 
     </div>
@@ -203,7 +206,6 @@
         function openModal(school) {
             document.getElementById(school + "Modal").style.display = "block";
         }
-
         function closeModal(school) {
             document.getElementById(school + "Modal").style.display = "none";
         }
